@@ -5,18 +5,11 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int m = sc.nextInt();
-        if(n<m){
-            int tmp = n;
-            n = m;
-            m = tmp;
-        }
+
         System.out.println(gcd(n,m));
     }
 
     static int gcd(int n, int m){
-        if(n%m==0){
-            return m;
-        }
-        return gcd(n,n%m);
+       return m == 0 ? n : gcd(m,m%n);
     }
 }
