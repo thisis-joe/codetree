@@ -10,7 +10,7 @@ public class Main {
             n = m;
             m = tmp;
         }
-        System.out.print(gcd(n,m));
+        System.out.println(gcd(n,m));
     }
 
     static int gcd(int n, int m){
