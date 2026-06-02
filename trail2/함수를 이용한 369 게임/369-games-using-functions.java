@@ -13,8 +13,13 @@ public class Main {
                 cnt++;
                 continue;
             }
-            if(!(i+"").replaceAll("[1245780]","").isEmpty()) cnt++;
-        }
+            for(char c : (i+"").toCharArray()){
+                if(c=='3' || c=='6' || c=='9'){
+                    cnt++;
+                    break;
+                }
+            }
+        } 
 
         System.out.print(cnt);
     }
