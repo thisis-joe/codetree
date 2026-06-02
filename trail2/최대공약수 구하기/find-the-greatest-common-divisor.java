@@ -10,6 +10,6 @@ public class Main {
     }
 
     static int gcd(int n, int m){
-       return m == 0 ? n : gcd(m,m%n);
+       return m == 0 ? n : gcd(m,n%m);
     }
 }
