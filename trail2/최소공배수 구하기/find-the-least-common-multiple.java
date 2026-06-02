@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        System.out.println(n*m/gcd(n,m));
+    }
+
+    static int gcd(int n, int m){
+        return m == 0 ? n : gcd(m,n%m);
+    }
+}
