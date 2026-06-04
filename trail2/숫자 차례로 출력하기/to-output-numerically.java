@@ -5,23 +5,23 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         n = Integer.parseInt(br.readLine());
-        print1(1);
+        asc(n);
         System.out.println();
-        print2(n);
+        desc(n);
     }
 
-    static void print1(int cnt){
-        if(cnt==n+1) return;
+    static void asc(int cnt){
+        if(cnt==0) return;
+
+        asc(cnt-1);
 
         System.out.print(cnt+" ");
-
-        print1(cnt+1);
     }
-    static void print2(int cnt){
+    static void desc(int cnt){
         if(cnt==0) return;
 
         System.out.print(cnt+" ");
 
-        print2(cnt-1);
+        desc(cnt-1);
     }
 }
