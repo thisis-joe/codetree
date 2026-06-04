@@ -17,11 +17,13 @@ public class Main {
             if(a[s] != b[0]) continue;
 
             int bEndIdx = 0;
-
+            int cnt = 0;
             for(int e=s; e<s+n2; e++){
                 if(a[e]!=b[bEndIdx++]) break;
-
-                if(a[e]==b[n2-1]){
+                else{
+                    cnt++;
+                }
+                if(cnt==n2 && a[e]==b[n2-1]){
                     System.out.print("Yes");
                     return;
                 }
