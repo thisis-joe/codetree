@@ -12,7 +12,7 @@ public class Main {
         }
         if(n==1)  System.out.print(arr[0]);
         System.out.print(recur(0));
-        
+        return;
     }
 
     static int recur(int idx){
