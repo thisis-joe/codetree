@@ -1,28 +1,22 @@
-import java.util.*;
-import java.io.*;
-public class Main {
-    static int n,cnt;
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        n = Integer.parseInt(br.readLine());
+import java.util.Scanner;
 
-        recur(n);
-
-        System.out.print(cnt);
+public class Main {    
+    // a가 3n + 1 수열을 총 몇번 반복해야 1이 되는지 반환합니다.
+    public static int countNumber(int a) {
+        if(a == 1)
+            return 0;
+    
+        if(a % 2 == 0)
+            return countNumber(a / 2) + 1;
+        else
+            return countNumber(3 * a + 1) + 1;
     }
 
-    static void recur(int num){
-        if(num == 1) return;
-        if(num%2==0) {
-            num /= 2;
-            cnt++;
-        }
-        else{
-            num = num * 3 + 1;
-            cnt++;
-        }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // 변수 선언 및 입력:
+        int n = sc.nextInt();
 
-        recur(num);
-
+        System.out.print(countNumber(n));
     }
 }
