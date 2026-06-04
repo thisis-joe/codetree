@@ -12,13 +12,15 @@ public class Main {
             b[i] = sc.nextInt();
         
         //
-        for(int s = 0 ; s < n1; s++){
+        for(int s = 0 ; s < n1-n2; s++){
 
             if(a[s] != b[0]) continue;
+
             int bEndIdx = 0;
 
             for(int e=s; e<s+n2; e++){
                 if(a[e]!=b[bEndIdx++]) break;
+
                 if(a[e]==b[n2-1]){
                     System.out.print("Yes");
                     return;
@@ -27,5 +29,6 @@ public class Main {
             }
         }
         System.out.print("No");
+        return;
     }
 }
