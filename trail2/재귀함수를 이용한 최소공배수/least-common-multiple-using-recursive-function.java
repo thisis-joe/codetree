@@ -14,7 +14,7 @@ public class Main {
             arr[i] = Integer.parseInt(st.nextToken());
         }
 
-        int lcm = 1;
+        int lcm = arr[0];
         for(int i = 1; i < n ; i++){
             lcm = arr[i-1] * arr[i] / gcd(arr[i-1],arr[i]);
             arr[i] = lcm;
